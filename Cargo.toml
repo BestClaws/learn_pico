@@ -1,0 +1,18 @@
+[package]
+name = "learn_pico"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+cortex-m="*"
+cortex-m-rt="*"
+
+rp2040-hal={version="*", features=["rt", "critical-section-impl"]}
+critical-section="*"
+embedded-hal="*"
+rp2040-boot2="*"
+panic-halt="*"
+nb="*"
+fugit="*"

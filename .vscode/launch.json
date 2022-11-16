@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Pico",
+            "request": "launch",
+            "type": "cortex-debug",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceFolder}/target/thumbv6m-none-eabi/debug/learn_pico",
+            // "preLaunchTask": "build_binary",
+            "servertype": "external",
+            "gdbPath" : "gdb-multiarch",
+            "gdbTarget": "localhost:3333",
+            "runToEntryPoint": "main",
+            "preLaunchCommands": [
+                "monitor init",
+                "monitor reset init",
+                "monitor halt",
+            ],
+            "postRestartCommands": [
+                "break main",
+                "continue"
+            ],
+        }
+    ]
+}
