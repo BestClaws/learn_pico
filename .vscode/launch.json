@@ -7,16 +7,17 @@
             "type": "cortex-debug",
             "cwd": "${workspaceRoot}",
             "executable": "${workspaceFolder}/target/thumbv6m-none-eabi/debug/learn_pico",
-            // "preLaunchTask": "build_binary",
+            "preLaunchTask": "cargo_build",
             "servertype": "external",
             "gdbPath" : "gdb-multiarch",
             "gdbTarget": "localhost:3333",
-            "runToEntryPoint": "main",
-            "preLaunchCommands": [
-                "monitor init",
-                "monitor reset init",
-                "monitor halt",
-            ],
+            // "runToEntryPoint": "main",
+            "showDevDebugOutput": "raw",
+            // "preLaunchCommands": [
+            //     "monitor init",
+            //     "monitor reset init",
+            //     "monitor halt",
+            // ],  
             "postRestartCommands": [
                 "break main",
                 "continue"

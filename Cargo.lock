@@ -177,6 +177,7 @@ dependencies = [
  "panic-halt",
  "rp2040-boot2",
  "rp2040-hal",
+ "rp2040-hal-macros",
 ]
 
 [[package]]
@@ -317,8 +318,7 @@ dependencies = [
 [[package]]
 name = "rp2040-hal"
 version = "0.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2f919d0d3c64fd9c7642dac2267a55d6aa1667e45329e8605a3858727acc7711"
+source = "git+https://github.com/rp-rs/rp-hal#f00ea66ccd64256e28ee7257a949614841a89017"
 dependencies = [
  "cortex-m",
  "cortex-m-rt",
@@ -341,10 +341,8 @@ dependencies = [
 [[package]]
 name = "rp2040-hal-macros"
 version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "86479063e497efe1ae81995ef9071f54fd1c7427e04d6c5b84cde545ff672a5e"
+source = "git+https://github.com/rp-rs/rp-hal#f00ea66ccd64256e28ee7257a949614841a89017"
 dependencies = [
- "cortex-m-rt",
  "proc-macro2",
  "quote",
  "syn",
@@ -352,9 +350,9 @@ dependencies = [
 
 [[package]]
 name = "rp2040-pac"
-version = "0.3.0"
+version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "13a6106d5db01c7171a39c1f7696780912db9b42fe7ac722db60069c8904ea7c"
+checksum = "9192cafbb40d717c9e0ddf767aaf9c69fee1b4e48d22ed853b57b11f6d9f3d7e"
 dependencies = [
  "cortex-m",
  "cortex-m-rt",

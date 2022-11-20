@@ -9,7 +9,9 @@ edition = "2021"
 cortex-m="*"
 cortex-m-rt="*"
 
-rp2040-hal={version="*", features=["rt", "critical-section-impl"]}
+rp2040-hal={git="https://github.com/rp-rs/rp-hal", features=["rt", "critical-section-impl"]}
+
+rp2040-hal-macros={git="https://github.com/rp-rs/rp-hal"}
 critical-section="*"
 embedded-hal="*"
 rp2040-boot2="*"
